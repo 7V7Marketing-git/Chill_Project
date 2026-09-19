@@ -1,1 +1,1768 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICP Chill UC | Odoo Perú y Venezuela</title>
+    <meta name="description" content="Infografía estratégica interactiva del Ideal Customer Profile (ICP) de Chill UC para Odoo en Perú y Venezuela. Business Intelligence, Transformación Digital y Odoo.">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="ICP Chill UC | Odoo Perú y Venezuela">
+    <meta property="og:description" content="Infografía estratégica completa del Perfil de Cliente Ideal (ICP) de Chill UC.">
+    <meta property="og:type" content="website">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#0B0B0B',
+                        bgSecondary: '#111111',
+                        bgCardAlt: '#151515',
+                        cardBg: '#181818',
+                        cardHover: '#1D1D1D',
+                        borderCol: '#292929',
+                        textSec: '#B8B8B8',
+                        primaryBlue: '#2D9BB5',
+                        blueMed: '#2A8DAC',
+                        blueDark: '#266F9C',
+                        blueDeep: '#386697',
+                        violetLight: '#5D41AF',
+                        violetDark: '#763BBC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Manrope', 'Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+
+        .inline-icon { width: 1em; height: 1em; display: inline-block; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.125em; }
+        .inline-icon.use-fill { fill: currentColor; stroke: none; }
+        /* Custom scrollbar and utilities */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #292929;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #266F9C;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2D9BB5 0%, #266F9C 45%, #5D41AF 75%, #763BBC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#181818, #181818) padding-box, linear-gradient(135deg, #2D9BB5, #763BBC) border-box;
+        }
+        .gradient-glow {
+            box-shadow: 0 0 30px rgba(45, 155, 181, 0.15), 0 0 60px rgba(118, 59, 188, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2D9BB5 0%, #266F9C 45%, #5D41AF 75%, #763BBC 100%);
+        }
+        .category-anchor,
+        section[id] {
+            scroll-margin-top: 100px;
+        }
+
+        .nav-main[aria-current="page"] {
+            color: #FFFFFF;
+            background: #181818;
+            box-shadow: inset 0 -2px 0 #2D9BB5;
+        }
+
+        .clients-editorial .client-card {
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+        .clients-editorial .client-card:hover {
+            transform: translateY(-3px);
+            border-color: #386697;
+            background: #181818;
+        }
+
+        .radial-section > div:last-child {
+            position: relative;
+        }
+
+        .diagnostic-section .p-6 {
+            position: relative;
+            overflow: hidden;
+        }
+        .diagnostic-section .p-6::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #2D9BB5, #763BBC);
+            opacity: .7;
+        }
+
+        .roles-section .p-6 {
+            border-left: 2px solid #292929;
+            transition: border-color .2s ease, transform .2s ease;
+        }
+        .roles-section .p-6:hover {
+            border-left-color: #2D9BB5;
+            transform: translateX(3px);
+        }
+
+        .decision-flow-section .grid > div {
+            position: relative;
+        }
+
+        .timeline-section .grid > div {
+            position: relative;
+        }
+        .timeline-section .grid > div:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #386697;
+            font-weight: 700;
+        }
+        @media (max-width: 1023px) {
+            .timeline-section .grid > div:not(:last-child)::after {
+                content: "↓";
+                right: 50%;
+                top: auto;
+                bottom: -18px;
+                transform: translateX(50%);
+            }
+        }
+
+        .competitive-section .p-6 {
+            background: linear-gradient(180deg, #151515 0%, #111111 100%);
+        }
+
+        .summary-dashboard .p-6:first-child {
+            border-top: 2px solid #2D9BB5;
+        }
+        .summary-dashboard .p-6:nth-child(2) {
+            border-top: 2px solid #2A8DAC;
+        }
+        .summary-dashboard .p-6:nth-child(3) {
+            border-top: 2px solid #266F9C;
+        }
+
+
+        .odoo-module-grid > div {
+            position: relative;
+            min-height: 82px;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+        }
+        .odoo-module-grid > div:hover {
+            transform: translateY(-3px);
+            border-color: #386697;
+            background: #1D1D1D;
+        }
+        .odoo-module-icon, .section-icon {
+            width: 38px; height: 38px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            background: #111111; border: 1px solid #292929;
+            flex: 0 0 auto;
+        }
+        .need-item {
+            position: relative;
+            border-left: 2px solid #292929 !important;
+        }
+        .need-item::before {
+            content: ""; position: absolute; left: -5px; top: 24px;
+            width: 8px; height: 8px; border-radius: 50%;
+            background: linear-gradient(135deg,#2D9BB5,#763BBC);
+            box-shadow: 0 0 10px rgba(45,155,181,.25);
+        }
+        .decision-role .decision-icon {
+            width: 54px; height: 54px; margin: 0 auto 14px; border-radius: 16px;
+            display:flex; align-items:center; justify-content:center;
+            background:#111111; border:1px solid #292929; font-size:22px;
+        }
+        .summary-at-glance {
+            background: linear-gradient(145deg,#151515 0%,#101010 100%);
+            border: 1px solid #292929;
+            border-radius: 24px; overflow: hidden;
+            box-shadow: 0 25px 70px rgba(0,0,0,.25);
+        }
+        .summary-kpi {
+            position:relative; padding:22px; border-right:1px solid #292929;
+        }
+        .summary-kpi:last-child { border-right:0; }
+        .summary-item {
+            padding:18px 20px; border-top:1px solid #292929;
+        }
+        .summary-item .summary-label {
+            display:flex; align-items:center; gap:9px; margin-bottom:8px;
+            font-size:11px; text-transform:uppercase; letter-spacing:.12em; font-weight:700; color:#B8B8B8;
+        }
+        .summary-item .summary-label i { color:#2D9BB5; }
+        .summary-core {
+            background: linear-gradient(135deg,rgba(45,155,181,.12),rgba(118,59,188,.10));
+            border:1px solid #386697;
+        }
+
+        @media (max-width: 767px) {
+            .nav-main {
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
+            .timeline-section .grid > div:not(:last-child)::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><defs><symbol id="icon-handshake" viewBox="0 0 24 24"><path d="M3 10l4-4 4 2 2-2 4 4-4 4-3-3-3 3z"/><path d="M7 6l-2-2M17 6l2-2"/></symbol><symbol id="icon-gears" viewBox="0 0 24 24"><circle cx="8" cy="12" r="3"/><circle cx="16" cy="12" r="3"/><path d="M8 7v2M8 15v2M3 12h2M11 12h2M16 7v2M16 15v2M13 12h0"/></symbol><symbol id="icon-network-wired" viewBox="0 0 24 24"><rect x="3" y="4" width="5" height="4" rx="1"/><rect x="16" y="4" width="5" height="4" rx="1"/><rect x="9.5" y="16" width="5" height="4" rx="1"/><path d="M5.5 8v4h13V8M12 12v4"/></symbol><symbol id="icon-graduation-cap" viewBox="0 0 24 24"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c3 2 9 2 12 0v-5M20 9v6"/></symbol><symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5M15 14c3 0 6 2 6 5"/></symbol><symbol id="icon-bullseye" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></symbol><symbol id="icon-cart-shopping" viewBox="0 0 24 24"><path d="M3 4h3l2 10h9l3-7H7"/><circle cx="10" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></symbol><symbol id="icon-boxes-stacked" viewBox="0 0 24 24"><path d="M3 7l5-3 5 3-5 3zM11 12l5-3 5 3-5 3zM3 15l5-3 5 3-5 3z"/><path d="M8 7v3M16 12v3M8 15v3"/></symbol><symbol id="icon-file-invoice-dollar" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h3"/><path d="M9 11h5M9 15h5"/><circle cx="11" cy="18" r="2"/><path d="M11 16v4"/></symbol><symbol id="icon-calculator" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="8" y="6" width="8" height="3"/><path d="M9 13h0M12 13h0M15 13h0M9 17h0M12 17h0M15 17h0"/></symbol><symbol id="icon-industry" viewBox="0 0 24 24"><path d="M3 20V10l6 4V9l6 4V6h5v14z"/><path d="M7 17h2M12 17h2M17 17h2"/></symbol><symbol id="icon-diagram-project" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="4" rx="1"/><rect x="15" y="3" width="6" height="4" rx="1"/><rect x="9" y="17" width="6" height="4" rx="1"/><path d="M6 7v5h12V7M12 12v5"/></symbol><symbol id="icon-people-group" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 19c0-3 3-5 6-5s6 2 6 5M10 19c0-3 3-5 6-5s6 2 6 5"/></symbol><symbol id="icon-truck-fast" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M1 10h5M1 13h4"/></symbol><symbol id="icon-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></symbol><symbol id="icon-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol><symbol id="icon-bullhorn" viewBox="0 0 24 24"><path d="M4 11h4l10-5v12L8 13H4z"/><path d="M8 13l2 6h-3l-2-6M21 9c1 2 1 4 0 6"/></symbol><symbol id="icon-plane" viewBox="0 0 24 24"><path d="M3 13l8-2V4l2-1 2 8 6 1v2l-6 1-2 6-2-1v-5l-8-2z"/></symbol><symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 9 4 17c0 3 2 4 4 3 7-1 10-7 12-16z"/><path d="M5 19c3-5 7-8 12-11"/></symbol><symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol><symbol id="icon-stethoscope" viewBox="0 0 24 24"><path d="M6 3v6a6 6 0 0012 0V3M6 3H4M18 3h2M12 15v2a4 4 0 004 4h1"/><circle cx="19" cy="18" r="2"/></symbol><symbol id="icon-car" viewBox="0 0 24 24"><path d="M5 16l1-6 3-4h6l3 4 1 6H5z"/><path d="M4 16h16M7 11h10"/><circle cx="8" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></symbol><symbol id="icon-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol><symbol id="icon-warehouse" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v10H3z"/><path d="M7 12h3v5H7zM14 12h3v5h-3zM3 10h18"/></symbol><symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol><symbol id="icon-check" viewBox="0 0 24 24"><path d="M5 12l4 4L19 7"/></symbol><symbol id="icon-store" viewBox="0 0 24 24"><path d="M4 10h16l-2-6H6zM5 10v10h14V10M9 20v-6h6v6"/></symbol><symbol id="icon-building" viewBox="0 0 24 24"><path d="M5 21V3h10v18M15 8h4v13M8 7h3M8 11h3M8 15h3"/></symbol><symbol id="icon-mountain" viewBox="0 0 24 24"><path d="M3 20l7-12 4 6 2-3 5 9z"/><path d="M9 10l2-3 2 3"/></symbol><symbol id="icon-file-shield" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h3"/><path d="M12 12l4 2v2c0 3-2 5-4 6-2-1-4-3-4-6v-2z"/></symbol><symbol id="icon-chess-queen" viewBox="0 0 24 24"><path d="M5 20h14M7 17h10l-1-9-4 4-4-4zM5 6l3 2M19 6l-3 2M12 3v4"/></symbol><symbol id="icon-server" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="1"/><rect x="4" y="14" width="16" height="6" rx="1"/><path d="M7 7h0M7 17h0M11 7h6M11 17h6"/></symbol><symbol id="icon-bolt" viewBox="0 0 24 24"><path d="M13 2L5 13h6l-1 9 8-11h-6z"/></symbol><symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18c6 0 0-10 8-10"/></symbol><symbol id="icon-chart-line" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16"/><path d="M6 15l4-4 3 2 5-7"/></symbol><symbol id="icon-sliders" viewBox="0 0 24 24"><path d="M5 4v16M12 4v16M19 4v16M3 8h4M10 15h4M17 10h4"/></symbol><symbol id="icon-shop" viewBox="0 0 24 24"><path d="M4 10h16l-2-6H6zM5 10v10h14V10M9 20v-6h6v6"/></symbol><symbol id="icon-cubes" viewBox="0 0 24 24"><path d="M12 3l8 4-8 4-8-4zM4 7v9l8 5 8-5V7M12 11v10"/></symbol><symbol id="icon-arrow-trend-up" viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 6-8"/><path d="M15 7h5v5"/></symbol><symbol id="icon-layer-group" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5zM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol><symbol id="icon-file-excel" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h3"/><path d="M9 11l4 6M13 11l-4 6"/></symbol><symbol id="icon-hand" viewBox="0 0 24 24"><path d="M7 12V6a1.5 1.5 0 013 0v5V5a1.5 1.5 0 013 0v6V6a1.5 1.5 0 013 0v6V8a1.5 1.5 0 013 0v7c0 4-3 6-7 6-3 0-5-2-7-5l-2-3a1.5 1.5 0 012.5-1.5z"/></symbol><symbol id="icon-boxes-packing" viewBox="0 0 24 24"><path d="M3 8l6-3 6 3-6 3zM9 11v7M3 8v7l6 3 6-3V8M14 10l4-2 4 2-4 2zM18 12v7M14 10v7l4 2 4-2v-7"/></symbol><symbol id="icon-file-invoice" viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6zM15 3v4h3M9 11h6M9 15h6M9 18h4"/></symbol><symbol id="icon-chart-pie" viewBox="0 0 24 24"><path d="M12 3v9h9A9 9 0 0012 3z"/><path d="M12 12V3a9 9 0 109 9z"/></symbol><symbol id="icon-chart-line-down" viewBox="0 0 24 24"><path d="M4 5v14h16"/><path d="M6 8l4 4 3-3 5 6"/></symbol><symbol id="icon-user-tie" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M6 21c0-5 2-8 6-8s6 3 6 8M9 13l3 4 3-4"/></symbol><symbol id="icon-laptop-code" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M2 20h20M9 9l-2 2 2 2M15 9l2 2-2 2M13 8l-2 6"/></symbol><symbol id="icon-truck-ramp-box" viewBox="0 0 24 24"><path d="M3 7h10v10H3zM13 10h4l4 4v3h-8z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M15 7l3-3 3 3"/></symbol><symbol id="icon-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 5c5-3 7 3 14 0v8c-7 3-9-3-14 0"/></symbol><symbol id="icon-crown" viewBox="0 0 24 24"><path d="M3 7l5 4 4-7 4 7 5-4-2 10H5zM5 20h14"/></symbol><symbol id="icon-earth-americas" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 4l2 4-2 3 2 3-1 4M15 5l-1 3 3 2-1 3 3 1M5 14l4-1 2 3-2 4"/></symbol><symbol id="icon-users-gear" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="16" r="3"/><path d="M17 12v1M17 19v1M13 16h1M20 16h1"/></symbol><symbol id="icon-triangle-exclamation" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 9v5M12 17v1"/></symbol><symbol id="icon-trophy" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 01-10 0zM7 6H4v2a4 4 0 004 4M17 6h3v2a4 4 0 01-4 4M12 14v4M8 21h8M9 18h6"/></symbol><symbol id="icon-crosshairs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol><symbol id="icon-angle-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol></defs></svg>
+<body class="bg-[#0B0B0B] text-[#FFFFFF] font-sans antialiased selection:bg-[#2D9BB5] selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-[#0B0B0B]/90 backdrop-blur-md border-b border-[#292929]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Left Logo: 7V7 Marketing -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/7V7logo.png" alt="7V7 Marketing" class="h-10 w-auto object-contain">
+            </div>
+
+            <!-- Main Navigation: 3 top-level categories -->
+            <nav class="hidden md:flex items-center gap-2 text-sm font-semibold tracking-wide text-[#B8B8B8]" aria-label="Navegación principal">
+                <a href="#chill" class="nav-main px-4 py-2.5 rounded-lg hover:text-white hover:bg-[#181818] transition-all">Chill</a>
+                <a href="#icp-propuesto" class="nav-main px-4 py-2.5 rounded-lg hover:text-white hover:bg-[#181818] transition-all">ICP Propuesto</a>
+                <a href="#competidores" class="nav-main px-4 py-2.5 rounded-lg hover:text-white hover:bg-[#181818] transition-all">Competidores</a>
+            </nav>
+
+            <!-- Compact mobile navigation -->
+            <nav class="flex md:hidden items-center gap-1" aria-label="Navegación móvil">
+                <a href="#chill" class="px-2 py-2 text-xs text-[#B8B8B8] hover:text-white">Chill</a>
+                <a href="#icp-propuesto" class="px-2 py-2 text-xs text-[#B8B8B8] hover:text-white">ICP</a>
+                <a href="#competidores" class="px-2 py-2 text-xs text-[#B8B8B8] hover:text-white">Competidores</a>
+            </nav>
+
+            <!-- Right Logo: Chill UC -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/Chilllogo.png" alt="Chill UC" class="h-10 w-auto object-contain">
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-4">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(45,155,181,0.15),rgba(255,255,255,0))]"></div>
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center space-x-3 px-4 py-2 rounded-full bg-[#181818] border border-[#292929] mb-8">
+                <span class="w-2.5 h-2.5 rounded-full gradient-bg animate-pulse"></span>
+                <span class="text-xs uppercase tracking-widest font-semibold text-[#B8B8B8]">Business Intelligence · Digital Transformation · Odoo Strategy</span>
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
+                ICP <span class="gradient-text">CHILL UC</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-[#B8B8B8] max-w-3xl mx-auto font-light mb-12">
+                Perfil de Cliente Ideal para implementación y consultoría Odoo en <span class="text-white font-semibold">🇵🇪 Perú</span> y <span class="text-white font-semibold">🇻🇪 Venezuela</span>.
+            </p>
+
+            <!-- Protagonist Badge -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+                <div class="p-6 rounded-2xl bg-[#181818] border border-[#292929] text-center gradient-border">
+                    <span class="block text-xs uppercase tracking-wider text-[#B8B8B8] mb-1">Rango de Empleados</span>
+                    <span class="text-4xl sm:text-5xl font-extrabold gradient-text">50–250</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-[#181818] border border-[#292929] text-center flex flex-col justify-center">
+                    <span class="block text-xs uppercase tracking-wider text-[#B8B8B8] mb-1">Mercados Clave</span>
+                    <span class="text-2xl font-bold text-white">🇵🇪 Perú &amp; 🇻🇪 Venezuela</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-[#181818] border border-[#292929] text-center flex flex-col justify-center">
+                    <span class="block text-xs uppercase tracking-wider text-[#B8B8B8] mb-1">Criterio Crítico</span>
+                    <span class="text-xl font-bold text-white">Complejidad Operativa</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 pb-32">
+
+        <!-- SOBRE CHILL UC -->
+        <section id="chill" class="pt-16 category-anchor">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Ecosistema Odoo</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Sobre Chill UC</h2>
+                    <p class="text-[#B8B8B8] text-lg leading-relaxed">
+                        Chill UC es una empresa especializada en transformación digital y tecnología empresarial. Como Odoo Partner, ofrece servicios integrales diseñados para potenciar la eficiencia corporativa.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929]">
+                            <svg class="inline-icon text-[#2D9BB5] text-xl mb-2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-handshake"></use></svg>
+                            <h3 class="font-semibold text-white mb-1">Consultoría</h3>
+                            <p class="text-sm text-[#B8B8B8]">Estrategia y análisis de procesos de negocio.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929]">
+                            <svg class="inline-icon text-[#266F9C] text-xl mb-2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gears"></use></svg>
+                            <h3 class="font-semibold text-white mb-1">Implementación</h3>
+                            <p class="text-sm text-[#B8B8B8]">Despliegue a medida de soluciones Odoo.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929]">
+                            <svg class="inline-icon text-[#5D41AF] text-xl mb-2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-network-wired"></use></svg>
+                            <h3 class="font-semibold text-white mb-1">Integración</h3>
+                            <p class="text-sm text-[#B8B8B8]">Conexión con pasarelas, ERPs y sistemas legacy.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929]">
+                            <svg class="inline-icon text-[#763BBC] text-xl mb-2" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg>
+                            <h3 class="font-semibold text-white mb-1">Capacitación &amp; Soporte</h3>
+                            <p class="text-sm text-[#B8B8B8]">Adopción de usuarios y evolución continua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 p-8 rounded-2xl bg-[#151515] border border-[#292929] relative">
+                    <h3 class="text-xl font-bold mb-6 text-center text-white">Centralización en Plataforma Única Odoo</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 odoo-module-grid">
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#2D9BB5] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-users"></use></svg>
+                            <span class="block text-xs font-semibold text-white">CRM</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#2A8DAC] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bullseye"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Ventas</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#266F9C] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cart-shopping"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Compras</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#386697] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-boxes-stacked"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Inventario</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#5D41AF] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-invoice-dollar"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Facturación</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#763BBC] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-calculator"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Contabilidad</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#2D9BB5] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-industry"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Manufactura</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#266F9C] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-diagram-project"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Proyectos</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center flex flex-col items-center justify-center gap-1">
+                            <svg class="inline-icon text-[#763BBC] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-people-group"></use></svg>
+                            <span class="block text-xs font-semibold text-white">RR. HH.</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center col-span-2 sm:col-span-3">
+                            <svg class="inline-icon text-[#2D9BB5] mb-1" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck-fast"></use></svg>
+                            <span class="block text-xs font-semibold text-white">Logística &amp; Operaciones Avanzadas</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-center text-[#B8B8B8] mt-6">Presencia consolidada en Perú y Venezuela con adaptación fiscal y operativa nativa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTES ACTUALES -->
+        <section id="sec-02" class="pt-16 category-anchor clients-editorial">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Cartera de Referencia</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Clientes Actuales</h2>
+                <p class="text-[#B8B8B8] max-w-3xl">
+                    La cartera actual de Chill UC sirve como referencia para entender el mercado, validando el encaje de Odoo en diversos sectores. No limita el ICP futuro, enfocado en identificar operaciones complejas.
+                </p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-3 mt-6">
+                    <button onclick="filterClients('ALL')" id="btn-all" class="px-4 py-2 rounded-lg bg-[#181818] border border-[#292929] text-sm font-semibold hover:border-[#2D9BB5] transition-all text-white active-filter">TODOS (16)</button>
+                    <button onclick="filterClients('PERU')" id="btn-peru" class="px-4 py-2 rounded-lg bg-[#181818] border border-[#292929] text-sm font-semibold hover:border-[#2D9BB5] transition-all text-[#B8B8B8]">🇵🇪 PERÚ (12)</button>
+                    <button onclick="filterClients('VENEZUELA')" id="btn-ven" class="px-4 py-2 rounded-lg bg-[#181818] border border-[#292929] text-sm font-semibold hover:border-[#2D9BB5] transition-all text-[#B8B8B8]">🇻🇪 VENEZUELA (4)</button>
+                </div>
+            </div>
+
+            <!-- Client Table / List Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="clients-grid">
+                <!-- Client 1 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-industry"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">M&amp;M Drilling Fluids Service</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Minería, Energía e Industria</span>
+                </div>
+                <!-- Client 2 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Mining Parts Supplies</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 3 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Baison</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 4 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gears"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Master Industrial Perú</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Industria e Ingeniería</span>
+                </div>
+                <!-- Client 5 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Transportes Aliados</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Transporte y Logística</span>
+                </div>
+                <!-- Client 6 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bullhorn"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Fabian Publicidad</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Marketing y Publicidad</span>
+                </div>
+                <!-- Client 7 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-plane"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Fraxigal Agencia de Viajes</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Turismo</span>
+                </div>
+                <!-- Client 8 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="VENEZUELA">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">🇻🇪 Venezuela</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Dismarket Express</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 9 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-leaf"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">SAR Ambiental</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Servicios Ambientales</span>
+                </div>
+                <!-- Client 10 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Mentory Capacitación</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Educación y Capacitación</span>
+                </div>
+                <!-- Client 11 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-globe"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Pacific Trade</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 12 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="VENEZUELA">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">🇻🇪 Venezuela</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Keiko</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 13 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="VENEZUELA">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">🇻🇪 Venezuela</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-stethoscope"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Equipos Médicos JCH</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 14 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Solindra</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 15 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="VENEZUELA">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">🇻🇪 Venezuela</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Distribuidora Restrepo</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+                <!-- Client 16 -->
+                <div class="client-card p-5 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between" data-country="PERU">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">🇵🇪 Perú</span>
+                            <svg class="inline-icon text-[#B8B8B8] text-sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-car"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-1">Frenos y Repuestos La Solución</h3>
+                    </div>
+                    <span class="text-xs text-[#B8B8B8] mt-4 pt-3 border-t border-[#292929]">Comercio y Distribución</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBJETIVO DEL ICP -->
+        <section id="icp-propuesto" class="pt-16 category-anchor objective-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Calificación Estratégica</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 p-8 rounded-2xl bg-[#151515] border border-[#292929] text-center gradient-border">
+                    <span class="text-xs uppercase tracking-widest text-[#B8B8B8] block mb-2">Filtro Cuantitativo Principal</span>
+                    <span class="text-6xl font-extrabold gradient-text block mb-4">50–250</span>
+                    <p class="text-white font-semibold mb-2">Empleados</p>
+                    <p class="text-xs text-[#B8B8B8]">El número de empleados funciona como filtro inicial. La complejidad operativa es el criterio adicional de calificación.</p>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="text-3xl font-bold">Objetivo del ICP</h2>
+                    <p class="text-[#B8B8B8] leading-relaxed">
+                        Identificar y priorizar empresas en Perú y Venezuela que tengan una operación suficientemente compleja como para beneficiarse de Odoo como plataforma integral de gestión empresarial.
+                    </p>
+                    <p class="text-sm font-semibold text-white uppercase tracking-wider">El perfil buscado presenta necesidades relacionadas con:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Centralización de información</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Integración entre áreas</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Automatización de procesos</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Control operativo</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Información en tiempo real</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Reducción de procesos manuales</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] flex items-center space-x-3 col-span-1 sm:col-span-2">
+                            <svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
+                            <span class="text-sm text-[#B8B8B8]">Escalabilidad del negocio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARACTERÍSTICAS DEMOGRÁFICAS Y DE LA EMPRESA -->
+        <section id="sec-04" class="pt-16 profile-accordion-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Demografía &amp; Verticales</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Características Demográficas y de la Empresa</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block mb-1">PAÍSES</span>
+                        <span class="text-xl font-bold text-white">🇵🇪 Perú &amp; 🇻🇪 Venezuela</span>
+                    </div>
+                    <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block mb-1">TAMAÑO</span>
+                        <span class="text-xl font-bold text-white">50–250 empleados</span>
+                    </div>
+                    <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block mb-1">PERFIL OPERATIVO</span>
+                        <span class="text-xs text-[#B8B8B8]">Inventario, compras, almacenes, sucursales, distribución, producción y multi-área.</span>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold mb-4 text-white">Verticales Prioritarias e Industrias (Acordeón Interactivo)</h3>
+                <p class="text-sm text-[#B8B8B8] mb-6">Haz clic en cualquier industria para desplegar sus subindustrias completas:</p>
+            </div>
+
+            <!-- Accordion Container -->
+            <div class="space-y-4" id="industries-accordion">
+                <!-- 1. Comercio y Distribución -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-1')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2D9BB5]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-warehouse"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">COMERCIO Y DISTRIBUCIÓN</span>
+                        </div>
+                        <svg id="icon-ind-1" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-1" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Mayoristas</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Importadores</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Comercializadoras</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores especializados</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores de tecnología</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores industriales</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores de repuestos</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Retail -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-2')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2A8DAC]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-store"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">RETAIL</span>
+                        </div>
+                        <svg id="icon-ind-2" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-2" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Cadenas</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Supermercados</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Freterías / Ferreterías</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Retail especializado</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Negocios con múltiples puntos de venta</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Manufactura e Industria -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-3')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#266F9C]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-industry"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">MANUFACTURA E INDUSTRIA</span>
+                        </div>
+                        <svg id="icon-ind-3" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-3" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Fabricantes</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Industria alimentaria</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Metalúrgicas</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Plásticos</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Fabricantes de productos industriales</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Construcción y Materiales -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-4')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#386697]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-building"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">CONSTRUCCIÓN Y MATERIALES</span>
+                        </div>
+                        <svg id="icon-ind-4" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-4" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Comercializadoras de materiales</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Ferreterías</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Fabricantes de materiales</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Proveedores para construcción</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Minería -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-5')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#5D41AF]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-mountain"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">MINERÍA</span>
+                        </div>
+                        <svg id="icon-ind-5" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-5" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Proveedores mineros</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores de equipos y repuestos</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Servicios mineros</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Empresas de mantenimiento especializado</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Logística y Transporte -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-6')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#763BBC]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">LOGÍSTICA Y TRANSPORTE</span>
+                        </div>
+                        <svg id="icon-ind-6" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-6" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Transporte de carga</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Operadores logísticos</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Empresas de distribución</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Empresas con flota propia</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Agroindustria y Alimentos -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-7')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2D9BB5]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-leaf"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">AGROINDUSTRIA Y ALIMENTOS</span>
+                        </div>
+                        <svg id="icon-ind-7" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-7" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Productores</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Procesadores</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Distribuidores</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Comercializadoras</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 8. Automotriz -->
+                <div class="rounded-xl bg-[#151515] border border-[#292929] overflow-hidden">
+                    <button onclick="toggleAccordion('ind-8')" class="w-full p-5 flex items-center justify-between text-left hover:bg-[#181818] transition-colors">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#763BBC]">
+                                <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-car"></use></svg>
+                            </div>
+                            <span class="font-bold text-lg text-white">AUTOMOTRIZ</span>
+                        </div>
+                        <svg id="icon-ind-8" class="inline-icon text-[#B8B8B8] transition-transform" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+                    </button>
+                    <div id="content-ind-8" class="hidden px-6 pb-6 pt-2 border-t border-[#292929] bg-[#111111]">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Repuestos</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Autopartes</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Concesionarios</span></li>
+                            <li class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-sm text-[#B8B8B8] flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Postventa</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Países: integrado dentro de Características Demográficas y de la Empresa -->
+                <div class="mt-12 pt-10 border-t border-[#292929]">
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Mercados prioritarios</span>
+                            <h3 class="text-2xl sm:text-3xl font-bold mt-2">Países</h3>
+                        </div>
+                        <p class="text-sm text-[#B8B8B8] max-w-xl">La operación se adapta a los requerimientos fiscales y operativos de cada mercado.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Perú -->
+                <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-3xl">🇵🇪</span>
+                            <h3 class="text-2xl font-bold text-white">PERÚ</h3>
+                        </div>
+                        <p class="text-sm text-[#B8B8B8] mb-6">
+                            Mercado prioritario para empresas que necesitan gestión integrada, automatización, control operativo, integración de áreas y escalabilidad.
+                        </p>
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] mb-6">
+                            <span class="text-xs text-[#2D9BB5] font-semibold block mb-2"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-shield"></use></svg> ENTORNO FISCAL Y LOCALIZACIÓN</span>
+                            <p class="text-xs text-white">Especial relevancia para empresas que necesitan adaptación a procesos y requerimientos locales, incluyendo <span class="text-[#2D9BB5] font-semibold">SUNAT</span> y facturación electrónica.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-[#292929]">
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center">
+                            <span class="text-xs text-[#B8B8B8] block">Gestión Integrada</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center">
+                            <span class="text-xs text-[#B8B8B8] block">Control SUNAT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Venezuela -->
+                <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <span class="text-3xl">🇻🇪</span>
+                            <h3 class="text-2xl font-bold text-white">VENEZUELA</h3>
+                        </div>
+                        <p class="text-sm text-[#B8B8B8] mb-6">
+                            Mercado prioritario para empresas que necesitan gestión integrada, automatización, transformación digital, control de operaciones e integración de áreas.
+                        </p>
+                        <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] mb-6">
+                            <span class="text-xs text-[#763BBC] font-semibold block mb-2"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-shield"></use></svg> ENTORNO FISCAL Y LOCALIZACIÓN</span>
+                            <p class="text-xs text-white">Con especial relevancia para empresas que requieren adaptación al entorno fiscal y operativo venezolano, incluyendo <span class="text-[#763BBC] font-semibold">SENIAT</span>.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 pt-4 border-t border-[#292929]">
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center">
+                            <span class="text-xs text-[#B8B8B8] block">Transformación Digital</span>
+                        </div>
+                        <div class="p-3 rounded-lg bg-[#181818] border border-[#292929] text-center">
+                            <span class="text-xs text-[#B8B8B8] block">Control SENIAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+        </section>
+
+        <!-- ÁREAS DE LLEGADA -->
+        <section id="sec-05" class="pt-16 radial-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Departamentos Objetivo</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Áreas de Llegada</h2>
+                <p class="text-[#B8B8B8]">Estructura departamental objetivo para las soluciones de Odoo y consultoría Chill UC:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Dirección -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2D9BB5] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chess-queen"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">DIRECCIÓN</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Gerencia General</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Dirección</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Dueños / propietarios</span></li>
+                    </ul>
+                </div>
+
+                <!-- Operaciones -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2A8DAC] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gears"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">OPERACIONES</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Operaciones</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Procesos</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Gestión operativa</span></li>
+                    </ul>
+                </div>
+
+                <!-- Finanzas y Administración -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#266F9C] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-calculator"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">FINANZAS Y ADMINISTRACIÓN</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Finanzas</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Administración</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Contabilidad</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Control financiero</span></li>
+                    </ul>
+                </div>
+
+                <!-- Tecnología -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#386697] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-server"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">TECNOLOGÍA</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>IT</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Sistemas</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Transformación digital</span></li>
+                    </ul>
+                </div>
+
+                <!-- Comercial -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#5D41AF] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bullseye"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">COMERCIAL</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Ventas</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Comercial</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Desarrollo de negocio</span></li>
+                    </ul>
+                </div>
+
+                <!-- Compras y Abastecimiento -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#763BBC] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cart-shopping"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">COMPRAS Y ABASTECIMIENTO</h3>
+                    <ul class="space-y-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Compras</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Procurement</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Sourcing</span></li>
+                    </ul>
+                </div>
+
+                <!-- Logística y Supply Chain -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] col-span-1 md:col-span-2">
+                    <div class="w-10 h-10 rounded-lg bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2D9BB5] mb-4">
+                        <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck-fast"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">LOGÍSTICA Y SUPPLY CHAIN</h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm text-[#B8B8B8]">
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Logística</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Supply Chain</span></li>
+                        <li class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-angle-right"></use></svg><span>Almacenes</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NECESIDADES ESPECÍFICAS -->
+        <section id="sec-06" class="pt-16 transformation-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Requerimientos Funcionales</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Necesidades Específicas</h2>
+                <p class="text-[#B8B8B8]">Flujo de transformación y requerimientos clave que impulsan la adopción de Odoo:</p>
+            </div>
+
+            <!-- Transformation Flow Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 mb-10 text-center">
+                <div class="p-4 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs uppercase tracking-wider text-[#2D9BB5] font-bold block mb-1">Paso 01</span>
+                    <span class="font-bold text-white">CENTRALIZAR</span>
+                </div>
+                <div class="p-4 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs uppercase tracking-wider text-[#2A8DAC] font-bold block mb-1">Paso 02</span>
+                    <span class="font-bold text-white">INTEGRAR</span>
+                </div>
+                <div class="p-4 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs uppercase tracking-wider text-[#266F9C] font-bold block mb-1">Paso 03</span>
+                    <span class="font-bold text-white">AUTOMATIZAR</span>
+                </div>
+                <div class="p-4 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs uppercase tracking-wider text-[#5D41AF] font-bold block mb-1">Paso 04</span>
+                    <span class="font-bold text-white">CONTROLAR</span>
+                </div>
+                <div class="p-4 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs uppercase tracking-wider text-[#763BBC] font-bold block mb-1">Paso 05</span>
+                    <span class="font-bold text-white">ESCALAR</span>
+                </div>
+            </div>
+
+            <!-- Full Needs List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#2D9BB5]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bullseye"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Centralizar la información</h3><p class="text-xs text-[#B8B8B8]">Unificar la data corporativa en una sola fuente de verdad.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#2A8DAC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-network-wired"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Integrar áreas</h3><p class="text-xs text-[#B8B8B8]">Sincronizar ventas, compras, inventario y finanzas sin fricción.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#266F9C]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bolt"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Automatizar procesos</h3><p class="text-xs text-[#B8B8B8]">Eliminar tareas manuales y repetitivas en toda la cadena.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#386697]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-boxes-stacked"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Control de inventario</h3><p class="text-xs text-[#B8B8B8]">Optimizar existencias, stock mínimo y mermas en almacén.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#5D41AF]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cart-shopping"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Procesos de compra</h3><p class="text-xs text-[#B8B8B8]">Optimizar requisiciones, cotizaciones y órdenes de compra.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#763BBC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-invoice-dollar"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Automatizar facturación</h3><p class="text-xs text-[#B8B8B8]">Emisión y control electrónico integrado con entes locales.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#2D9BB5]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-route"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Mejorar trazabilidad</h3><p class="text-xs text-[#B8B8B8]">Seguimiento completo del ciclo de operaciones y pedidos.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#2A8DAC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chart-line"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Información en tiempo real</h3><p class="text-xs text-[#B8B8B8]">Dashboards gerenciales y reportes financieros actualizados.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#266F9C]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-sliders"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Estandarizar procesos</h3><p class="text-xs text-[#B8B8B8]">Definición de flujos de trabajo homogéneos y auditables.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#386697]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-warehouse"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Múltiples almacenes</h3><p class="text-xs text-[#B8B8B8]">Control descentralizado y transferencias entre locaciones.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#5D41AF]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-shop"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Sucursales y puntos de operación</h3><p class="text-xs text-[#B8B8B8]">Gestión centralizada de múltiples sedes comerciales.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 need-item">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#763BBC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cubes"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Plataforma única de gestión</h3><p class="text-xs text-[#B8B8B8]">Eliminación de silos de software y costos de mantenimiento.</p></div>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] flex items-start space-x-4 col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="p-2.5 rounded-lg bg-[#181818] border border-[#292929] text-[#2D9BB5]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-arrow-trend-up"></use></svg></div>
+                    <div><h3 class="font-semibold text-white mb-1">Escalabilidad del negocio</h3><p class="text-xs text-[#B8B8B8]">Solución modular preparada para crecer junto con la empresa.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUNTOS DE DOLOR -->
+        <section id="sec-07" class="pt-16 diagnostic-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Diagnóstico de Operación</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Puntos de Dolor Operativo</h2>
+                <p class="text-[#B8B8B8]">Fricciones críticas identificadas en el segmento ICP que motivan la migración a Odoo:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#2D9BB5]">DOLOR 01</span>
+                        <svg class="inline-icon text-xl text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-layer-group"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Sistemas Desconectados</h3>
+                    <p class="text-sm text-[#B8B8B8]">Cada área trabaja con herramientas diferentes y la información no está integrada.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#2A8DAC]">DOLOR 02</span>
+                        <svg class="inline-icon text-xl text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-excel"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Dependencia de Excel</h3>
+                    <p class="text-sm text-[#B8B8B8]">Procesos importantes dependen de hojas de cálculo y trabajo manual.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#266F9C]">DOLOR 03</span>
+                        <svg class="inline-icon text-xl text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-hand"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Procesos Manuales</h3>
+                    <p class="text-sm text-[#B8B8B8]">La operación requiere demasiadas tareas repetitivas y propensas a error.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#386697]">DOLOR 04</span>
+                        <svg class="inline-icon text-xl text-[#386697]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-boxes-packing"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Errores de Inventario</h3>
+                    <p class="text-sm text-[#B8B8B8]">Diferencias entre inventario físico, sistemas y registros administrativos.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#5D41AF]">DOLOR 05</span>
+                        <svg class="inline-icon text-xl text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-invoice"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Errores de Facturación</h3>
+                    <p class="text-sm text-[#B8B8B8]">Procesos manuales generan inconsistencias y retrabajo administrativo.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#763BBC]">DOLOR 06</span>
+                        <svg class="inline-icon text-xl text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chart-pie"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Falta de Información Consolidada</h3>
+                    <p class="text-sm text-[#B8B8B8]">La dirección no tiene una visión completa y actualizada del negocio.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#2D9BB5]">DOLOR 07</span>
+                        <svg class="inline-icon text-xl text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-route"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Falta de Trazabilidad</h3>
+                    <p class="text-sm text-[#B8B8B8]">Dificultad para conocer el estado y recorrido de una operación.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#2A8DAC]">DOLOR 08</span>
+                        <svg class="inline-icon text-xl text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-server"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">ERP Insuficiente</h3>
+                    <p class="text-sm text-[#B8B8B8]">El sistema actual ya no responde a las necesidades del negocio.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929]">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#266F9C]">DOLOR 09</span>
+                        <svg class="inline-icon text-xl text-[#266F9C]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chart-line-down"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Problemas para Escalar</h3>
+                    <p class="text-sm text-[#B8B8B8]">El crecimiento genera mayor complejidad y los sistemas actuales no acompañan.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-mono text-[#5D41AF]">DOLOR 10</span>
+                        <svg class="inline-icon text-xl text-[#5D41AF]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-network-wired"></use></svg>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Falta de Integración</h3>
+                    <p class="text-sm text-[#B8B8B8]">Ventas, compras, inventario, contabilidad y operaciones funcionan de manera aislada.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROLES CLAVE Y DECISORES -->
+        <section id="sec-08" class="pt-16 roles-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Matriz Organizacional</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Roles Clave y Decisores</h2>
+                <p class="text-[#B8B8B8]">Perfiles profesionales abordados en la estrategia comercial de Chill UC:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gerencia General -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2D9BB5] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-user-tie"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">GERENCIA GENERAL</h3>
+                        <p class="text-xs text-[#2D9BB5] font-semibold mb-3">CEO · Gerente General · Director · Owner / Propietario</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">Crecimiento, control y transformación del negocio.</p>
+                    </div>
+                </div>
+
+                <!-- Tecnología -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#2A8DAC] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-laptop-code"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">TECNOLOGÍA</h3>
+                        <p class="text-xs text-[#2A8DAC] font-semibold mb-3">CIO · CTO · IT Manager · Jefe de Sistemas</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">Integración, tecnología, arquitectura y sistemas.</p>
+                    </div>
+                </div>
+
+                <!-- Operaciones -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#266F9C] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-gears"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">OPERACIONES</h3>
+                        <p class="text-xs text-[#266F9C] font-semibold mb-3">Director de Operaciones · Gerente de Operaciones · Gerente de Procesos</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">Eficiencia, automatización y control operativo.</p>
+                    </div>
+                </div>
+
+                <!-- Finanzas -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#386697] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-file-invoice-dollar"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">FINANZAS</h3>
+                        <p class="text-xs text-[#386697] font-semibold mb-3">CFO · Gerente Financiero · Gerente Administrativo · Controller · Jefe de Contabilidad</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">Control financiero, información consolidada y automatización.</p>
+                    </div>
+                </div>
+
+                <!-- Comercial -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#5D41AF] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-chart-line"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">COMERCIAL</h3>
+                        <p class="text-xs text-[#5D41AF] font-semibold mb-3">Director Comercial · Gerente Comercial · Sales Manager</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">CRM, ventas, seguimiento y eficiencia comercial.</p>
+                    </div>
+                </div>
+
+                <!-- Compras / Logística -->
+                <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                    <div>
+                        <div class="section-icon w-12 h-12 rounded-xl bg-[#181818] border border-[#292929] flex items-center justify-center text-[#763BBC] mb-4">
+                            <svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-truck-ramp-box"></use></svg>
+                        </div>
+                        <h3 class="font-bold text-lg text-white mb-2">COMPRAS / LOGÍSTICA</h3>
+                        <p class="text-xs text-[#763BBC] font-semibold mb-3">Procurement Manager · Sourcing Manager · Gerente de Compras · Gerente de Logística · Supply Chain Manager</p>
+                    </div>
+                    <div class="pt-4 border-t border-[#292929]">
+                        <span class="text-xs text-[#B8B8B8] block font-semibold mb-1">INTERÉS PRINCIPAL:</span>
+                        <p class="text-xs text-white">Abastecimiento, inventario, proveedores y distribución.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOMADORES DE DECISIÓN -->
+        <section id="sec-09" class="pt-16 decision-flow-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Flujo de Adopción</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Tomadores de Decisión</h2>
+                <p class="text-[#B8B8B8]">Estructura de influencia y aprobación en el proceso de venta B2B:</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
+                <!-- Champion -->
+                <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929] text-center gradient-border decision-role">
+                    <span class="text-xs font-mono uppercase tracking-widest text-[#2D9BB5] block mb-2">Impulsor Interno</span>
+                    <div class="decision-icon text-[#2D9BB5]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-flag"></use></svg></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">CHAMPION</h3>
+                    <p class="text-sm text-[#B8B8B8] mb-6">Personas que pueden identificar el problema e impulsar internamente el proyecto.</p>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] text-xs text-white space-y-2 text-left">
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Gerente General</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Gerente de Operaciones</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>CFO</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2D9BB5]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>IT Manager</span></div>
+                    </div>
+                </div>
+
+                <!-- Influenciadores -->
+                <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929] text-center decision-role">
+                    <span class="text-xs font-mono uppercase tracking-widest text-[#2A8DAC] block mb-2">Evaluación Técnica</span>
+                    <div class="decision-icon text-[#2A8DAC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-users"></use></svg></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">INFLUENCIADORES</h3>
+                    <p class="text-sm text-[#B8B8B8] mb-6">Áreas que participan activamente en la evaluación y validación.</p>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] text-xs text-white space-y-2 text-left">
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Administración &amp; Contabilidad</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Compras &amp; Logística</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Almacén &amp; Comercial</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#2A8DAC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Sistemas</span></div>
+                    </div>
+                </div>
+
+                <!-- Sponsor -->
+                <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929] text-center decision-role">
+                    <span class="text-xs font-mono uppercase tracking-widest text-[#763BBC] block mb-2">Aprobación Final</span>
+                    <div class="decision-icon text-[#763BBC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-crown"></use></svg></div>
+                    <h3 class="text-2xl font-bold text-white mb-4">SPONSOR</h3>
+                    <p class="text-sm text-[#B8B8B8] mb-6">Quien puede aprobar o patrocinar la transformación digital.</p>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] text-xs text-white space-y-2 text-left">
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>CEO</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Gerencia General</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Owner / Propietario</span></div>
+                        <div class="flex items-center space-x-2"><svg class="inline-icon text-[#763BBC]" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg><span>Directorio</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PATRONES DE COMPRA -->
+        <section id="sec-10" class="pt-16 timeline-section">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Disparadores &amp; Modelo</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Patrones de Compra y Modelo Esperado</h2>
+                <p class="text-[#B8B8B8]">Disparadores estratégicos que llevan a la evaluación de Odoo y el proceso de implementación:</p>
+            </div>
+
+            <!-- Disparadores Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#2D9BB5] block mb-2">DISPARADOR 01</span>
+                    <h3 class="font-bold text-white mb-1">CRECIMIENTO</h3>
+                    <p class="text-xs text-[#B8B8B8]">El sistema actual ya no soporta el crecimiento de la empresa.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#2A8DAC] block mb-2">DISPARADOR 02</span>
+                    <h3 class="font-bold text-white mb-1">REEMPLAZO DE ERP</h3>
+                    <p class="text-xs text-[#B8B8B8]">La empresa necesita cambiar su sistema actual.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#266F9C] block mb-2">DISPARADOR 03</span>
+                    <h3 class="font-bold text-white mb-1">CONSOLIDACIÓN</h3>
+                    <p class="text-xs text-[#B8B8B8]">Existen diferentes sistemas y se busca centralizar la operación.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#386697] block mb-2">DISPARADOR 04</span>
+                    <h3 class="font-bold text-white mb-1">EXPANSIÓN</h3>
+                    <p class="text-xs text-[#B8B8B8]">Nuevas sucursales, almacenes, más productos o unidades de negocio.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#5D41AF] block mb-2">DISPARADOR 05</span>
+                    <h3 class="font-bold text-white mb-1">DIGITALIZACIÓN</h3>
+                    <p class="text-xs text-[#B8B8B8]">Existe una alta dependencia de procesos manuales.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929]">
+                    <span class="text-xs font-mono text-[#763BBC] block mb-2">DISPARADOR 06</span>
+                    <h3 class="font-bold text-white mb-1">EFICIENCIA</h3>
+                    <p class="text-xs text-[#B8B8B8]">La empresa busca reducir tiempos, errores y retrabajo.</p>
+                </div>
+                <div class="p-5 rounded-xl bg-[#151515] border border-[#292929] md:col-span-2">
+                    <span class="text-xs font-mono text-[#2D9BB5] block mb-2">DISPARADOR 07</span>
+                    <h3 class="font-bold text-white mb-1">TRANSFORMACIÓN</h3>
+                    <p class="text-xs text-[#B8B8B8]">La organización busca modernizar su modelo de gestión integral.</p>
+                </div>
+            </div>
+
+            <!-- Modelo de Compra Timeline -->
+            <div class="p-8 rounded-2xl bg-[#151515] border border-[#292929]">
+                <h3 class="text-xl font-bold mb-6 text-center text-white">Modelo de Compra Esperado &amp; Implementación</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 text-center">
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#2D9BB5] font-mono mb-2">FASE 01</span>
+                        <span class="text-sm font-bold text-white">Evaluación de necesidades</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#2A8DAC] font-mono mb-2">FASE 02</span>
+                        <span class="text-sm font-bold text-white">Definición de alcance</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#266F9C] font-mono mb-2">FASE 03</span>
+                        <span class="text-sm font-bold text-white">Selección de módulos</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#386697] font-mono mb-2">FASE 04</span>
+                        <span class="text-sm font-bold text-white">Implementación por fases</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#5D41AF] font-mono mb-2">FASE 05</span>
+                        <span class="text-sm font-bold text-white">Capacitación</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#763BBC] font-mono mb-2">FASE 06</span>
+                        <span class="text-sm font-bold text-white">Go-Live</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#181818] border border-[#292929] flex flex-col justify-between">
+                        <span class="text-xs text-[#2D9BB5] font-mono mb-2">FASE 07</span>
+                        <span class="text-sm font-bold text-white">Soporte y evolución</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- RESUMEN DEL ICP -->
+        <section id="sec-13" class="pt-16 summary-dashboard">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Dashboard Ejecutivo Final</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Resumen del ICP — Chill UC</h2>
+                <p class="text-[#B8B8B8]">Panel de control estratégico consolidado con los pilares fundamentales del Ideal Customer Profile:</p>
+            </div>
+
+            <!-- ICP AT A GLANCE: una sola vista consolidada -->
+            <div class="summary-at-glance">
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    <div class="summary-kpi summary-core">
+                        <div class="flex items-center gap-3 mb-3"><div class="section-icon text-[#2D9BB5]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-building"></use></svg></div><span class="text-xs uppercase tracking-widest text-[#B8B8B8] font-bold">Empresa</span></div>
+                        <div class="text-3xl font-extrabold text-white">50–250</div>
+                        <div class="text-xs text-[#B8B8B8] mt-1">empleados</div>
+                    </div>
+                    <div class="summary-kpi">
+                        <div class="flex items-center gap-3 mb-3"><div class="section-icon text-[#2A8DAC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-earth-americas"></use></svg></div><span class="text-xs uppercase tracking-widest text-[#B8B8B8] font-bold">Mercados</span></div>
+                        <div class="text-2xl font-extrabold text-white">🇵🇪 Perú + 🇻🇪 Venezuela</div>
+                        <div class="text-xs text-[#B8B8B8] mt-1">SUNAT · SENIAT</div>
+                    </div>
+                    <div class="summary-kpi">
+                        <div class="flex items-center gap-3 mb-3"><div class="section-icon text-[#763BBC]"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-layer-group"></use></svg></div><span class="text-xs uppercase tracking-widest text-[#B8B8B8] font-bold">Necesidad central</span></div>
+                        <div class="text-base font-extrabold text-white">Centralizar + Integrar + Automatizar + Controlar + Escalar</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-industry"></use></svg> Industrias</div>
+                            <p class="text-sm text-white leading-relaxed">Comercio y Distribución · Retail · Manufactura e Industria · Construcción y Materiales · Minería · Logística y Transporte · Agroindustria y Alimentos · Automotriz</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-diagram-project"></use></svg> Complejidad operativa</div>
+                            <p class="text-sm text-white leading-relaxed">Inventario + Compras + Ventas + Logística + Múltiples Proveedores + Almacenes/Sucursales + Producción/Importaciones</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-users-gear"></use></svg> Áreas clave</div>
+                            <p class="text-sm text-white leading-relaxed">Gerencia · Operaciones · Finanzas · IT · Comercial · Compras · Logística · Supply Chain</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-triangle-exclamation"></use></svg> Problemas principales</div>
+                            <p class="text-sm text-white leading-relaxed">Sistemas desconectados · Excel · Procesos manuales · Errores de inventario · Falta de información consolidada · Falta de trazabilidad · ERP insuficiente · Problemas para escalar</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-bullseye"></use></svg> Criterio de calificación</div>
+                            <p class="text-sm text-white leading-relaxed">El tamaño es el filtro inicial; la complejidad operativa determina el encaje: inventario, compras, ventas, logística, múltiples proveedores, almacenes/sucursales, producción/importaciones y diferentes áreas administrativas.</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-cubes"></use></svg> Solución Chill UC</div>
+                            <p class="text-sm text-white leading-relaxed font-semibold">Odoo + Consultoría + Implementación + Integración + Capacitación + Soporte</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-trophy"></use></svg> Entorno competitivo</div>
+                            <p class="text-sm text-white leading-relaxed"><strong class="text-[#2D9BB5]">🇵🇪 Perú:</strong> IT Grupo · OZ Solutions · Alwa Perú<br><strong class="text-[#763BBC]">🇻🇪 Venezuela:</strong> 3MIT · Binaural · CorpoEureka</p>
+                        </div>
+                        <div class="summary-item summary-core">
+                            <div class="summary-label"><svg class="inline-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-crosshairs"></use></svg> Perfil objetivo</div>
+                            <p class="text-sm text-white leading-relaxed font-semibold">Empresa mediana con operación compleja que necesita una plataforma única para integrar áreas, automatizar procesos, mejorar el control y acompañar el crecimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPETIDORES DIRECTOS --><!-- COMPETIDORES DIRECTOS -->
+        <section id="competidores" class="pt-16 category-anchor">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-px bg-[#292929] flex-1"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-[#B8B8B8]">Análisis Competitivo Odoo</span>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">Competidores Directos</h2>
+                <p class="text-[#B8B8B8]">Análisis competitivo centrado exclusivamente en partners de Odoo que compiten por proyectos en el mismo espacio de mercado (sin ranking ni calificativos de valor):</p>
+            </div>
+
+            <!-- Perú Competitors -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold mb-6 text-white flex items-center space-x-2"><span>🇵🇪</span><span>Perú — Partners Odoo Gold</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- IT Grupo -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">IT GRUPO</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">140</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 22 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 200+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Fuerte presencia en:</span>
+                            <p class="text-xs text-[#B8B8B8]">Wholesale / Retail, Manufacturing, Logistics, Construction, Mining.</p>
+                        </div>
+                    </div>
+
+                    <!-- OZ Solutions -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">OZ SOLUTIONS</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">87</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 19 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 300+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Presencia &amp; Especialización:</span>
+                            <p class="text-xs text-[#B8B8B8]">Wholesale/Retail, Manufacturing, Logistics, Mining, Construction. Especialización en localización peruana y SUNAT.</p>
+                        </div>
+                    </div>
+
+                    <!-- Alwa Perú -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">ALWA PERÚ</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#2D9BB5]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">67</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 48 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 700+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Presencia &amp; Especialización:</span>
+                            <p class="text-xs text-[#B8B8B8]">Wholesale/Retail, Manufacturing, Services/Consulting, Health, Construction, Food. Especialización en localización peruana, SUNAT, contabilidad, inventario, RR. HH. y POS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venezuela Competitors -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 text-white flex items-center space-x-2"><span>🇻🇪</span><span>Venezuela — Partners Odoo Gold</span></h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- 3MIT -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">3MIT</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">114</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 33 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 600+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Fuerte presencia en:</span>
+                            <p class="text-xs text-[#B8B8B8]">Wholesale / Retail, Services, Manufacturing, Logistics, Food, Health.</p>
+                        </div>
+                    </div>
+
+                    <!-- Binaural -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">BINAURAL</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">115</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 28 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 600+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Presencia &amp; Enfoque:</span>
+                            <p class="text-xs text-[#B8B8B8]">Wholesale/Retail, Manufacturing, Health, Logistics, IT. Enfoque en operaciones complejas, automatización, escalabilidad y localización venezolana.</p>
+                        </div>
+                    </div>
+
+                    <!-- CorpoEureka -->
+                    <div class="p-6 rounded-xl bg-[#151515] border border-[#292929] flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="font-bold text-lg text-white">CORPOEUREKA</h4>
+                                <span class="text-xs px-2.5 py-1 rounded bg-[#181818] text-[#763BBC]">Odoo Gold Partner</span>
+                            </div>
+                            <div class="space-y-2 text-xs text-[#B8B8B8] mb-4">
+                                <p><strong class="text-white">112</strong> referencias</p>
+                                <p><strong class="text-white">Proyecto promedio:</strong> 25 usuarios</p>
+                                <p><strong class="text-white">Mayor proyecto:</strong> 400+ usuarios</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-[#292929]">
+                            <span class="text-xs text-white font-semibold block mb-1">Presencia &amp; Especialización:</span>
+                            <p class="text-xs text-[#B8B8B8]">Agriculture, Manufacturing, Wholesale/Retail, Construction, Logistics, Health. Especialización en operaciones complejas, múltiples compañías/sitios e integración de sistemas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0B0B0B] border-t border-[#292929] py-12 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4">
+                <img src="assets/7V7logo.png" alt="7V7 Marketing" class="h-8 w-auto object-contain">
+                <span class="text-[#B8B8B8]">|</span>
+                <img src="assets/Chilllogo.png" alt="Chill UC" class="h-8 w-auto object-contain">
+            </div>
+            <p class="text-xs text-[#B8B8B8]">
+                © 2026 Chill UC. Todos los derechos reservados. Infografía Estratégica ICP Odoo Perú y Venezuela.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Client filtering logic for Section 02
+        function filterClients(country) {
+            const cards = document.querySelectorAll('.client-card');
+            const btnAll = document.getElementById('btn-all');
+            const btnPeru = document.getElementById('btn-peru');
+            const btnVen = document.getElementById('btn-ven');
+
+            // Reset button styles
+            [btnAll, btnPeru, btnVen].forEach(b => {
+                b.classList.remove('border-[#2D9BB5]', 'text-white', 'bg-[#181818]');
+                b.classList.add('text-[#B8B8B8]');
+            });
+
+            if (country === 'ALL') {
+                btnAll.classList.add('border-[#2D9BB5]', 'text-white');
+                cards.forEach(c => c.style.display = 'flex');
+            } else if (country === 'PERU') {
+                btnPeru.classList.add('border-[#2D9BB5]', 'text-white');
+                cards.forEach(c => {
+                    if (c.getAttribute('data-country') === 'PERU') {
+                        c.style.display = 'flex';
+                    } else {
+                        c.style.display = 'none';
+                    }
+                });
+            } else if (country === 'VENEZUELA') {
+                btnVen.classList.add('border-[#2D9BB5]', 'text-white');
+                cards.forEach(c => {
+                    if (c.getAttribute('data-country') === 'VENEZUELA') {
+                        c.style.display = 'flex';
+                    } else {
+                        c.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        // Accordion toggle logic for Section 04
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Highlight the three top-level navigation categories while scrolling.
+        const navTargets = [
+            { id: 'chill', links: document.querySelectorAll('a[href="#chill"]') },
+            { id: 'icp-propuesto', links: document.querySelectorAll('a[href="#icp-propuesto"]') },
+            { id: 'competidores', links: document.querySelectorAll('a[href="#competidores"]') }
+        ];
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navTargets.forEach(item => {
+                        item.links.forEach(link => {
+                            if (item.id === entry.target.id) {
+                                link.setAttribute('aria-current', 'page');
+                            } else {
+                                link.removeAttribute('aria-current');
+                            }
+                        });
+                    });
+                }
+            });
+        }, { rootMargin: '-30% 0px -55% 0px', threshold: 0 });
+
+        document.querySelectorAll('#chill, #icp-propuesto, #competidores').forEach(section => navObserver.observe(section));
+
+    </script>
+</body>
+</html>
